@@ -18,7 +18,7 @@ body {
   font-size: large;
 }
 
-#order-review, #order-confirmation, #delivery-details {
+#order-review, #order-confirmation, #delivery-details, #no-delivery {
   display: none;
 }
 
