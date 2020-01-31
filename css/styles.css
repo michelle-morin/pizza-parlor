@@ -1,6 +1,6 @@
 html, body {
   height: 100%;
-  background:url(../img/vegpizza.jpg) no-repeat center center fixed;
+  background:url(../img/margpizza.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -14,12 +14,13 @@ body {
   color: rgb(45, 119, 2);
   background-color: #FFF0DA;
   border: 2px solid rgb(45, 119, 2);
+  padding: 1rem 0.5rem;
 }
 
 .jumbotron h1 {
   font-weight: bold;
-  -webkit-text-stroke: 1.25px rgb(82, 1, 1);
-  color: rgb(247, 199, 199);
+  -webkit-text-stroke: 1.25px #111111;
+  color: rgb(90, 2, 2);
 }
 
 .jumbotron h2 {
@@ -43,6 +44,8 @@ body {
 
 h4 {
   color: rgb(45, 119, 2);
+  text-decoration: underline;
+  text-decoration-color: rgb(45, 119, 2);
 }
 
 .form-group h4 {
