@@ -1,18 +1,16 @@
-html {
-  height: 100%;
-}
-
 body {
-  background-image: url(../img/pizza.jpg);
+  background-image: url(../img/vegpizza.jpg);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-h1 {
+.jumbotron {
   text-align: center;
-  color: #111111;
+  color: #153801;
+  background-color: #FFF0DA;
+  border: 2px solid #153801;
 }
 
 #order-review, #order-confirmation {
@@ -20,18 +18,27 @@ h1 {
 }
 
 .card {
-  padding: 10px 30px;
+  background-color: #FFF0DA;
+  margin-top: 0px;
+  padding: 10px;
+  border: 2px solid #153801;
 }
 
 button.btn {
   width: 100%;
   margin-top: 20px;
-  border: 2px solid #111111;
+  border: 2px solid #153801;
+  color: #153801;
+  background-color: #FFF0DA;
+  font-weight: bold;
+  font-size: medium;
 }
 
 button.btn:hover {
   width: 100%;
   margin-top: 20px;
-  color: #f5f5f5;
-  background-color: #111111;
+  color: #FFF0DA;
+  background-color: #153801;
+  font-weight: bold;
+  font-size: medium;
 }
