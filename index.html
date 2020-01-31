@@ -58,18 +58,18 @@
             </div>
             <div class="form-group">
               <h3>Load on the toppings! (all pizzas come with mozzarella cheese)</h3>
-              <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
-              <input type="checkbox" name="topping" value="black olives">Black olives<br>
-              <input type="checkbox" name="topping" value="pineapple">Pineapple<br>
-              <input type="checkbox" name="topping" value="mushrooms">Sliced mushrooms<br>
-              <input type="checkbox" name="topping" value="garlic">Roasted garlic<br>
-              <input type="checkbox" name="topping" value="ham">Ham<br>
-              <input type="checkbox" name="topping" value="bacon">Bacon<br>
-              <input type="checkbox" name="topping" value="peppers">Bell peppers<br>
-              <input type="checkbox" name="topping" value="artichoke hearts">Artichoke hearts<br>
-              <input type="checkbox" name="topping" value="onion">Onion<br>
-              <input type="checkbox" name="topping" value="tomatoes">Sliced tomatoes<br>
-              <input type="checkbox" name="topping" value="cheese">Extra cheese<br>
+              <input type="checkbox" name="topping" value="pepperoni"> Pepperoni<br>
+              <input type="checkbox" name="topping" value="black olives"> Black olives<br>
+              <input type="checkbox" name="topping" value="pineapple"> Pineapple<br>
+              <input type="checkbox" name="topping" value="mushrooms"> Sliced mushrooms<br>
+              <input type="checkbox" name="topping" value="garlic"> Roasted garlic<br>
+              <input type="checkbox" name="topping" value="ham"> Ham<br>
+              <input type="checkbox" name="topping" value="bacon"> Bacon<br>
+              <input type="checkbox" name="topping" value="peppers"> Bell peppers<br>
+              <input type="checkbox" name="topping" value="artichoke hearts"> Artichoke hearts<br>
+              <input type="checkbox" name="topping" value="onion"> Onion<br>
+              <input type="checkbox" name="topping" value="tomatoes"> Sliced tomatoes<br>
+              <input type="checkbox" name="topping" value="cheese"> Extra cheese<br>
             </div>
             <button type="submit" class="btn">Review order</button>
           </form>
@@ -80,18 +80,16 @@
     <div class="col-md-5" id="order-review">
       <div class="card">
         <h3>Please review your order.</h3>
-        <p>If you need to make any changes to your order, resubmit your size/sauce/toppings selections.</p>
-        <p>Pizza size: <span class="pizza-size"></span></p>
-        <p>Sauce: <span class="pizza-sauce"></span></p>
-        <p class="selected-toppings">Toppings:</p>
-        <ul class="selected-toppings">
+        <p>You selected a <span class="pizza-size"></span> pizza with <span class="pizza-sauce"></span> sauce <span class="and"></span></p>
+        <ul id="selected-toppings">
         </ul>
         <p id="total-price">Price: $<span class="pizza-price"></span></p>
+        <p>If you need to make any changes, resubmit your size/sauce/toppings selections before completing your order.</p>
         <button id="purchase" class="btn" type="submit">Yum! Complete my order</button>
       </div>
     </div>
 
-    <div id="order-confirmation">
+    <div class="col-md-12" id="order-confirmation">
       <div class="card">
         <h3>Thanks for your purchase!</h3>
         <p>Your pizza will be ready for pick-up in approximately 25 minutes.</p>
