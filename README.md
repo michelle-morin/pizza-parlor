@@ -6,18 +6,21 @@
 
 ## Description
 
-_This webpage allows a user to choose one or more individual pizza toppings and a pizza size, then outputs a final cost of the pizza based on the user's selections._
+_This webpage allows a user to choose a pizza size, sauce, and optionally one or more individual toppings, then outputs an order review including a final cost of the pizza. In the order review, the webpage includes a button to order for pick-up and a button to order for delivery. When a user selects the pick-up button, the webpage displays an order confirmation with a confirmation number. When the user selects the delivery option, the webpage displays a form for the user to input thier name, street address, and zip code, all of which are required fields. When the user submits their delivery information, the webpage either displays an order confirmation (when the user's zip code is within Portland city limits) or directs the user to order a pizza for pick-up (if the user's zip code is outside of Portland city limits)._
 
 ## Specifications:
 
 | Specification | Example Input | Example Output |
 | ------------- |:-------------:| --------------:|
-| Webpage determines user selection of size when the user submits a form | user clicks "review order" button | size = size obtained from radio button |
-| Webpage determines user selection of one or more toppings when user submits a form | user clicks "review order" button | toppings = an array containing each "toppings" checkbox selected |
-| Webpage determines a base price of the pizza based on the user's size selection | size: small | price: 10 |
-| Webpage adds topping price to pizza price for each of the user's selected toppings | size: small, toppings: pepperoni | price: 12 |
-| Webpage outputs total price of pizza when user submits form | user clicks "review order" button | total price: $12 |
-| Webpage outputs order confirmation when user clicks "complete order" button | user clicks "complete order" button | "Thanks for your order!" |
+| Webpage determines user selection of pizza size when the user submits menu form | user selects "10" (small)" and clicks "review order" button | size = "small" |
+| Webpage determines user selection of pizza sauce when the user submits menu form | user selects "Marinara" and clicks "review order" button | sauce = "red" |
+| Webpage determines user selection of one or more toppings when user submits menu form | user selects "pepperoni" and "black olives" then clicks "review order" button | toppings = ["pepperoni", "black olives"] |
+| Webpage determines price of the pizza based on size (small: 10; medium: 16; large: 22) and toppings selections (+1 or +2 each, depending on topping type) | user selects size "small" and topping "pepperoni" | price: 12 |
+| Webpage displays total price of pizza when user submits menu form | user clicks "review order" button | price: $12 |
+| Webpage displays order confirmation when user clicks pick-up order button | user clicks "pick-up order" button | "It's pizza time!" |
+| Webpage displays form for obtaining delivery details when user clicks order delivery button | user clicks "order delivery" button | Webpage displays form fields for name, street address, zipcode, and a button |
+| Webpage displays order confirmation when user submits delivery details form and input zip code is within Portland city limits | name: "Michelle" address: 123 Main Street" zip code: "97205" | "It's pizza time!" |
+| Webpage displays message directing user to create an order for pick-up when user submits delivery details form and input zip code is outside of Portland city limits | name: "Michelle" address: "456 South Street" zip code: 999999 | "Delivery is only available within Portland. Click to place a pick-up order." |
 
 
 ## Setup/Installation Requirements
