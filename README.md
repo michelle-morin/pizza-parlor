@@ -19,7 +19,7 @@ _This webpage allows a user to choose a pizza size, sauce, and optionally one or
 | Webpage displays total price of pizza when user submits menu form | user clicks "review order" button | price: $12 |
 | Webpage displays order confirmation when user clicks pick-up order button | user clicks "pick-up order" button | "It's pizza time!" |
 | Webpage displays form for obtaining delivery details when user clicks order delivery button | user clicks "order delivery" button | Webpage displays form fields for name, street address, zipcode, and a button |
-| Webpage displays order confirmation when user submits delivery details form and input zip code is within Portland city limits | name: "Michelle" address: 123 Main Street" zip code: "97205" | "It's pizza time!" |
+| Webpage displays order confirmation when user submits delivery details form and input zip code is within Portland city limits | name: "Michelle" address: 123 Main Street" zip code: 97205 | "It's pizza time!" |
 | Webpage displays message directing user to create an order for pick-up when user submits delivery details form and input zip code is outside of Portland city limits | name: "Michelle" address: "456 South Street" zip code: 999999 | "Delivery is only available within Portland. Click to place a pick-up order." |
 
 
