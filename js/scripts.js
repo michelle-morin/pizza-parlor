@@ -5,6 +5,10 @@ function Pizza(size, sauce, toppings) {
   this.toppings = toppings
 }
 
+Pizza.prototype.addTopping = function(topping) {
+  this.toppings.push(topping);
+}
+
 Pizza.prototype.determinePrice = function() {
   var price;
   if (this.size === "small") {
@@ -55,12 +59,14 @@ $(document).ready(function() {
     var inputSize = $("input:radio[name=pizza-size]:checked").val();
     var inputSauce = $("input:radio[name=pizza-sauce]:checked").val();
     var inputToppings = [];
+    var userPizza = new Pizza(inputSize, inputSauce, inputToppings);
+
     $("input:checkbox[name=topping]:checked").each(function() {
       var inputTopping = $(this).val();
-      inputToppings.push(inputTopping);
+      userPizza.addTopping(inputTopping);
     });
 
-    var userPizza = new Pizza(inputSize, inputSauce, inputToppings);
+    console.log(userPizza);
     displayOrderDetails(userPizza);
 
     $("button#purchase").click(function() {
