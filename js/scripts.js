@@ -41,7 +41,7 @@ var displayOrderDetails = function(pizza) {
   pizza.toppings.forEach(function(topping) {
     $("ul#selected-toppings").append("<li>" + topping + "</li>");
     $("ul#selected-toppings").show();
-    $(".and").html("and the following toppings:");
+    $(".and").html("and:");
   });
   } else {
     $("ul#selected-toppings").hide();
@@ -68,17 +68,32 @@ var selectDelivery = function() {
   $("#order-review").hide();
 }
 
+var deliveryAvailable = function(zipcode) {
+  var portlandZipCodes = [97203, 97217, 97211, 97218, 97220, 97230, 97233, 97216, 97213, 97215, 97212, 97232, 97214, 97202, 97206, 97266, 97236, 97219, 97239, 97201, 97221, 97205, 97209, 97210, 97229, 97231];
+  if (portlandZipCodes.includes(zipcode)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 var completePurchaseDelivery = function(name, address, zipcode) {
   $("#pizza-menu").hide();
   $("#order-review").hide();
   $("#delivery-details").hide();
-  $(".delivery-pickup").html("delivered");
-  $("p.pickup").hide();
-  $("p.delivery").show();
-  $(".name").html(name);
-  $(".address").html(address);
-  $(".zipcode").html(zipcode);
-  $("#order-confirmation").show();
+  if (deliveryAvailable(zipcode)) {
+    $(".delivery-pickup").html("delivered");
+    $("p.pickup").hide();
+    $("p.delivery").show();
+    $(".name").html(name);
+    $(".address").html(address);
+    $(".zipcode").html(zipcode);
+    $("#order-confirmation").show();
+  } else if (deliveryAvailable(zipcode) === false) {
+    $(function() {
+      $("#no-delivery").show();
+    });
+  }
 }
 
 $(document).ready(function() {
@@ -104,6 +119,7 @@ $(document).ready(function() {
         var inputName = $("input#name").val();
         var inputAddress = $("input#address").val();
         var inputZipcode = parseInt($("input#zipcode").val());
+        deliveryAvailable(inputZipcode);
         completePurchaseDelivery(inputName, inputAddress, inputZipcode);
       });
     });
