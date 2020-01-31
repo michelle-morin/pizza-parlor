@@ -7,6 +7,7 @@ body {
 }
 
 .jumbotron {
+  margin-top: 2%;
   text-align: center;
   color: #153801;
   background-color: #FFF0DA;
@@ -22,6 +23,18 @@ body {
   margin-top: 0px;
   padding: 10px;
   border: 2px solid #153801;
+}
+
+#order-confirmation {
+  text-align: center;
+}
+
+h3 {
+  color: #153801;
+}
+
+.form-group h3 {
+  margin-top: 10px;
 }
 
 button.btn {
@@ -41,4 +54,15 @@ button.btn:hover {
   background-color: #153801;
   font-weight: bold;
   font-size: medium;
+}
+
+a {
+  color: #153801;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #153801;
+  text-decoration: underline;
+  text-decoration-color: #153801;
 }
