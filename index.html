@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Pizza Parlor</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Welcome to Pizza Palace</h1>
+    </div>
+    <div class="panel-body">
+      <form>
+        <p>Select a size:</p>
+        <div class="radio">
+          <label>
+            <input type="radio" name="pizza-size" value="small" checked>
+            10" (Small/Personal)
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="pizza-size" value="medium">
+            14" (Medium)
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="pizza-size" value="large">
+            18" (Large)
+          </label>
+        </div>
+        <p>Select one sauce:</p>
+        <div class="radio">
+          <label>
+            <input type="radio" name="pizza-sauce" value="red" checked>
+            Marinara
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="pizza-sauce" value="pesto">
+            Pesto
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="pizza-sauce" value="garlic-parm">
+            Garlic parmesan
+          </label>
+        </div>
+        <div class="form-group">
+          <p>All pizzas come with mozzarella cheese. Select any additional toppings:</p>
+          <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
+          <input type="checkbox" name="topping" value="black olives">Black olives<br>
+          <input type="checkbox" name="topping" value="pineapple">pineapple<br>
+          <input type="checkbox" name="topping" value="mushrooms">Sliced mushrooms<br>
+          <input type="checkbox" name="topping" value="garlic">Roasted garlic<br>
+          <input type="checkbox" name="topping" value="ham">Ham<br>
+          <input type="checkbox" name="topping" value="bacon">Bacon<br>
+          <input type="checkbox" name="topping" value="peppers">Bell peppers<br>
+          <input type="checkbox" name="topping" value="artichoke hearts">Artichoke hearts<br>
+          <input type="checkbox" name="topping" value="onion">Onion<br>
+          <input type="checkbox" name="topping" value="tomatoes">Sliced tomatoes<br>
+          <input type="checkbox" name="topping" value="cheese">Extra cheese<br>
+        </div>
+        <button type="submit" class="btn">Review order</button>
+      </form>
+    </div>
+
+    <div id="order-review">
+      <div class="well">
+        <h3>Please review your order.</h3>
+        <p>Resubmit your pizza preferences, above, if you need to make any changes. When you're ready, click the button below to complete your order!</p>
+        <p>Pizza size: <span class="pizza-size"></span></p>
+        <p>Sauce: <span class="pizza-sauce"></span></p>
+        <p>Toppings:</p>
+        <ul id="selected-toppings">
+        </ul>
+        <p id="total-price">Price: $<span class="pizza-price"></span></p>
+        <button id="purchase" class="btn" type="submit">This looks good. Complete my order!</button>
+      </div>
+    </div>
+
+    <div id="order-confirmation">
+      <div class="well">
+        <h3>Thanks for your purchase!</h3>
+        <p>Your pizza will be ready for pick-up in approximately 25 minutes.</p>
+        <p>Please show your confirmation number, <span class="confirmation-number"></span>, when you arrive to pick up your order.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
