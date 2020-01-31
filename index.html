@@ -11,7 +11,7 @@
   <div class="container">
     <div class="jumbotron">
       <h1>Welcome to Weirdough Pizza</h1>
-      <h2>now accepting online orders for pick-up</h2>
+      <h2>build your own pizza for delivery or pick-up</h2>
     </div>
     <div class="row align-items-start">
       <div class="col-md-7" id="pizza-menu">
@@ -86,7 +86,6 @@
           </form>
         </div>
       </div>
-
       <div class="col-md-5" id="order-review">
         <div class="card">
           <h3>Please review your order.</h3>
@@ -97,10 +96,10 @@
           <p>If you need to make any changes, resubmit your size/sauce/toppings selections before completing your order.</p>
           <button id="purchase-pickup" class="btn">Order for pick-up</button>
           <button id="purchase-delivery" class="btn">Deliver my pizza</button>
+          <p><em>Delivery is only available within Portland</em></p>
         </div>
       </div>
     </div>
-
     <div class="row" id="delivery-details">
       <div class="col-md-12">
         <div class="card">
@@ -122,7 +121,6 @@
         </div>
       </div>
     </div>
-
     <div class="row" id="no-delivery">
       <div class="col-md-12">
         <div class="card">
@@ -130,11 +128,10 @@
         </div>
       </div>
     </div>
-
     <div class="row" id="order-confirmation">
       <div class="col-md-12">
         <div class="card">
-          <h3>Thanks for your purchase!</h3>
+          <h3>It's almost pizza time!</h3>
           <p>Your pizza will be <span class="delivery-pickup"></span> in approximately 25 minutes.</p>
           <p class="pickup">Please show your confirmation number, <span class="confirmation-number"></span>, when you arrive to pick up your order.</p>
           <p class="delivery">Your pizza will be delivered to <span class="name"></span> at <span class="address"></span>, <span class="zipcode"></span>.</p>
