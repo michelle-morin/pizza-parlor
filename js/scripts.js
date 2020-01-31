@@ -39,6 +39,14 @@ var displayOrderDetails = function(pizza) {
   $(".pizza-price").html(pizzaPrice);
 }
 
+var completePurchase = function() {
+  $("#pizza-menu").hide();
+  $("#order-review").hide();
+  var confirmationNumber = (Math.random() * 100000).toFixed(0);
+  $(".confirmation-number").html(confirmationNumber);
+  $("#order-confirmation").show();
+}
+
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
@@ -54,5 +62,9 @@ $(document).ready(function() {
 
     var userPizza = new Pizza(inputSize, inputSauce, inputToppings);
     displayOrderDetails(userPizza);
+
+    $("button#purchase").click(function() {
+      completePurchase();
+    })
   });
 });
