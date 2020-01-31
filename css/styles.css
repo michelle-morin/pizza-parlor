@@ -14,7 +14,11 @@ body {
   border: 2px solid #153801;
 }
 
-#order-review, #order-confirmation {
+.jumbotron h2 {
+  font-size: large;
+}
+
+#order-review, #order-confirmation, #delivery-details {
   display: none;
 }
 

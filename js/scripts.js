@@ -51,33 +51,61 @@ var displayOrderDetails = function(pizza) {
   $(".pizza-price").html(pizzaPrice);
 }
 
-var completePurchase = function() {
+var completePurchasePickup = function() {
   $("#pizza-menu").hide();
   $("#order-review").hide();
   var confirmationNumber = (Math.random() * 100000).toFixed(0);
   $(".confirmation-number").html(confirmationNumber);
+  $(".delivery-pickup").html("ready for pick-up");
+  $("p.pickup").show();
+  $("p.delivery").hide();
+  $("#order-confirmation").show();
+}
+
+var selectDelivery = function() {
+  $("#delivery-details").show();
+  $("#pizza-menu").hide();
+  $("#order-review").hide();
+}
+
+var completePurchaseDelivery = function(name, address, zipcode) {
+  $("#pizza-menu").hide();
+  $("#order-review").hide();
+  $("#delivery-details").hide();
+  $(".delivery-pickup").html("delivered");
+  $("p.pickup").hide();
+  $("p.delivery").show();
+  $(".name").html(name);
+  $(".address").html(address);
+  $(".zipcode").html(zipcode);
   $("#order-confirmation").show();
 }
 
 $(document).ready(function() {
-  $("form").submit(function(event) {
+  $("form#order").submit(function(event) {
     event.preventDefault();
-
     var inputSize = $("input:radio[name=pizza-size]:checked").val();
     var inputSauce = $("input:radio[name=pizza-sauce]:checked").val();
     var inputToppings = [];
     var userPizza = new Pizza(inputSize, inputSauce, inputToppings);
-
     $("input:checkbox[name=topping]:checked").each(function() {
       var inputTopping = $(this).val();
       userPizza.addTopping(inputTopping);
     });
-    console.log(userPizza.toppings);
 
     displayOrderDetails(userPizza);
-
-    $("button#purchase").click(function() {
-      completePurchase();
-    })
+    $("button#purchase-pickup").click(function() {
+      completePurchasePickup();
+    });
+    $("button#purchase-delivery").click(function() {
+      selectDelivery();
+      $("form#deliver").submit(function(event) {
+        event.preventDefault();
+        var inputName = $("input#name").val();
+        var inputAddress = $("input#address").val();
+        var inputZipcode = parseInt($("input#zipcode").val());
+        completePurchaseDelivery(inputName, inputAddress, inputZipcode);
+      });
+    });
   });
 });

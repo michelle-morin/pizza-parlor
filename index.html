@@ -11,13 +11,12 @@
   <div class="container">
     <div class="jumbotron">
       <h1>Welcome to Weirdough Pizza</h1>
-      <h3>now accepting online orders for pick-up</h3>
+      <h2>now accepting online orders for pick-up</h2>
     </div>
     <div class="row align-items-start">
-    <div class="col-md-7" id="pizza-menu">
-      <div class="card">
-        <div class="card-body">
-          <form>
+      <div class="col-md-7" id="pizza-menu">
+        <div class="card">
+          <form id="order">
             <div class="row">
               <div class="col-md-6">
                 <h3>Select a size:</h3>
@@ -87,26 +86,52 @@
           </form>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-5" id="order-review">
-      <div class="card">
-        <h3>Please review your order.</h3>
-        <p>You selected a <span class="pizza-size"></span> pizza with <span class="pizza-sauce"></span> sauce <span class="and"></span></p>
-        <ul id="selected-toppings">
-        </ul>
-        <p id="total-price">Price: $<span class="pizza-price"></span></p>
-        <p>If you need to make any changes, resubmit your size/sauce/toppings selections before completing your order.</p>
-        <button id="purchase" class="btn" type="submit">Yum! Complete my order</button>
+      <div class="col-md-5" id="order-review">
+        <div class="card">
+          <h3>Please review your order.</h3>
+          <p>You selected a <span class="pizza-size"></span> pizza with <span class="pizza-sauce"></span> sauce <span class="and"></span></p>
+          <ul id="selected-toppings">
+          </ul>
+          <p id="total-price">Price: $<span class="pizza-price"></span></p>
+          <p>If you need to make any changes, resubmit your size/sauce/toppings selections before completing your order.</p>
+          <button id="purchase-pickup" class="btn">Order for pick-up</button>
+          <button id="purchase-delivery" class="btn">Deliver my pizza</button>
+        </div>
       </div>
     </div>
 
-    <div class="col-md-12" id="order-confirmation">
-      <div class="card">
-        <h3>Thanks for your purchase!</h3>
-        <p>Your pizza will be ready for pick-up in approximately 25 minutes.</p>
-        <p>Please show your confirmation number, <span class="confirmation-number"></span>, when you arrive to pick up your order.</p>
-        <a href="index.html">Click here to order another pizza!</a>
+    <div class="row" id="delivery-details">
+      <div class="col-md-12">
+        <div class="card">
+          <form id="deliver">
+            <div class="form-group">
+              <label for="name">Please enter your name:</label>
+              <input id="name" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label for="address">Street address for delivery:</label>
+              <input id="address" class="form-control" type="text" placeholder="e.g., 123 Main Street">
+            </div>
+            <div class="form-group">
+              <label for="zipcode">Zipcode:</label>
+              <input id="zipcode" class="form-control" type="text">
+            </div>
+            <button type="submit" id="complete-delivery" class="btn">Deliver my pizza!</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="order-confirmation">
+      <div class="col-md-12">
+        <div class="card">
+          <h3>Thanks for your purchase!</h3>
+          <p>Your pizza will be <span class="delivery-pickup"></span> in approximately 25 minutes.</p>
+          <p class="pickup">Please show your confirmation number, <span class="confirmation-number"></span>, when you arrive to pick up your order.</p>
+          <p class="delivery">Your pizza will be delivered to <span class="name"></span> at <span class="address"></span>, <span class="zipcode"></span>.</p>
+          <a href="index.html">Click here to order another pizza!</a>
+        </div>
       </div>
     </div>
   </div>
