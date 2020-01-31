@@ -18,58 +18,70 @@
       <div class="card">
         <div class="card-body">
           <form>
-            <h3>Select a size:</h3>
-            <div class="radio">
-              <label>
-                <input type="radio" name="pizza-size" value="small" checked>
-                10" (Small/Personal)
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="pizza-size" value="medium">
-                14" (Medium)
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="pizza-size" value="large">
-                18" (Large)
-              </label>
-            </div>
-            <h3>Select a sauce:</h3>
-            <div class="radio">
-              <label>
-                <input type="radio" name="pizza-sauce" value="red" checked>
-                Marinara
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="pizza-sauce" value="pesto">
-                Pesto
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="pizza-sauce" value="garlic-parm">
-                Garlic parmesan
-              </label>
+            <div class="row">
+              <div class="col-md-6">
+                <h3>Select a size:</h3>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="pizza-size" value="small" checked>
+                    10" (Small/Personal)
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="pizza-size" value="medium">
+                    14" (Medium)
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="pizza-size" value="large">
+                    18" (Large)
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h3>Select a sauce:</h3>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="pizza-sauce" value="red" checked>
+                    Marinara
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="pizza-sauce" value="pesto">
+                    Pesto
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="pizza-sauce" value="garlic-parm">
+                    Garlic parmesan
+                  </label>
+                </div>
+              </div>
             </div>
             <div class="form-group">
               <h3>Load on the toppings! (all pizzas come with mozzarella cheese)</h3>
-              <input type="checkbox" name="topping" value="pepperoni"> Pepperoni<br>
-              <input type="checkbox" name="topping" value="black olives"> Black olives<br>
-              <input type="checkbox" name="topping" value="pineapple"> Pineapple<br>
-              <input type="checkbox" name="topping" value="mushrooms"> Sliced mushrooms<br>
-              <input type="checkbox" name="topping" value="garlic"> Roasted garlic<br>
-              <input type="checkbox" name="topping" value="ham"> Ham<br>
-              <input type="checkbox" name="topping" value="bacon"> Bacon<br>
-              <input type="checkbox" name="topping" value="peppers"> Bell peppers<br>
-              <input type="checkbox" name="topping" value="artichoke hearts"> Artichoke hearts<br>
-              <input type="checkbox" name="topping" value="onion"> Onion<br>
-              <input type="checkbox" name="topping" value="tomatoes"> Sliced tomatoes<br>
-              <input type="checkbox" name="topping" value="cheese"> Extra cheese<br>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="checkbox" name="topping" value="pepperoni"> Pepperoni<br>
+                  <input type="checkbox" name="topping" value="black olives"> Black olives<br>
+                  <input type="checkbox" name="topping" value="pineapple"> Pineapple<br>
+                  <input type="checkbox" name="topping" value="mushrooms"> Sliced mushrooms<br>
+                  <input type="checkbox" name="topping" value="garlic"> Roasted garlic<br>
+                  <input type="checkbox" name="topping" value="ham"> Ham<br>
+                </div>
+                <div class="col-md-6">
+                  <input type="checkbox" name="topping" value="bacon"> Bacon<br>
+                  <input type="checkbox" name="topping" value="peppers"> Bell peppers<br>
+                  <input type="checkbox" name="topping" value="artichoke hearts"> Artichoke hearts<br>
+                  <input type="checkbox" name="topping" value="onion"> Onion<br>
+                  <input type="checkbox" name="topping" value="tomatoes"> Sliced tomatoes<br>
+                  <input type="checkbox" name="topping" value="cheese"> Extra cheese<br>
+                </div>
+              </div>
             </div>
             <button type="submit" class="btn">Review order</button>
           </form>
@@ -94,6 +106,7 @@
         <h3>Thanks for your purchase!</h3>
         <p>Your pizza will be ready for pick-up in approximately 25 minutes.</p>
         <p>Please show your confirmation number, <span class="confirmation-number"></span>, when you arrive to pick up your order.</p>
+        <a href="index.html">Click here to order another pizza!</a>
       </div>
     </div>
   </div>
