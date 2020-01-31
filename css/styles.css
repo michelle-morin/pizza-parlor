@@ -15,20 +15,12 @@ h1 {
   color: #111111;
 }
 
-.panel {
-  margin: 1% 30%;
-}
-
 #order-review, #order-confirmation {
   display: none;
 }
 
-.jumbotron {
-  text-align: center;
-}
-
-form {
-  padding: 0px 30px;
+.card {
+  padding: 10px 30px;
 }
 
 button.btn {
