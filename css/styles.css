@@ -1,17 +1,15 @@
-body {
-  background-image: url(../img/vegpizza.jpg);
+html, body {
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+  background:url(../img/vegpizza.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
 .jumbotron {
   margin-top: 2%;
   text-align: center;
-  color: #153801;
+  color: rgb(45, 119, 2);
   background-color: #FFF0DA;
-  border: 2px solid #153801;
+  border: 2px solid rgb(45, 119, 2);
 }
 
 .jumbotron h2 {
@@ -25,16 +23,16 @@ body {
 .card {
   background-color: #FFF0DA;
   margin-top: 0px;
-  padding: 10px;
-  border: 2px solid #153801;
+  padding: 20px;
+  border: 2px solid rgb(45, 119, 2);
 }
 
-#order-confirmation {
+#order-confirmation, #no-delivery {
   text-align: center;
 }
 
 h3 {
-  color: #153801;
+  color: rgb(45, 119, 2);
 }
 
 .form-group h3 {
@@ -44,8 +42,8 @@ h3 {
 button.btn {
   width: 100%;
   margin-top: 20px;
-  border: 2px solid #153801;
-  color: #153801;
+  border: 2px solid rgb(45, 119, 2);
+  color: rgb(45, 119, 2);
   background-color: #FFF0DA;
   font-weight: bold;
   font-size: medium;
@@ -55,18 +53,26 @@ button.btn:hover {
   width: 100%;
   margin-top: 20px;
   color: #FFF0DA;
-  background-color: #153801;
+  background-color: rgb(45, 119, 2);
   font-weight: bold;
   font-size: medium;
 }
 
 a {
-  color: #153801;
+  color: rgb(45, 119, 2);
   font-weight: bold;
 }
 
 a:hover {
-  color: #153801;
+  cursor: pointer;
+  color: rgb(45, 119, 2);
   text-decoration: underline;
-  text-decoration-color: #153801;
+  text-decoration-color: rgb(45, 119, 2);
+}
+
+img {
+  width: 200px;
+  height: auto;
+  margin-left: 40%;
+  margin-top: 3%;
 }
