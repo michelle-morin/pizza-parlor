@@ -10,16 +10,15 @@
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1>Welcome to the Pizza Parlor</h1>
+      <h1>Welcome to Weirdough Pizza</h1>
       <h3>now accepting online orders for pick-up</h3>
     </div>
     <div class="row align-items-start">
     <div class="col-md-7" id="pizza-menu">
       <div class="card">
-        <h2 class="card-title">Build your own pizza!</h2>
         <div class="card-body">
           <form>
-            <p>Select a size:</p>
+            <h3>Select a size:</h3>
             <div class="radio">
               <label>
                 <input type="radio" name="pizza-size" value="small" checked>
@@ -38,7 +37,7 @@
                 18" (Large)
               </label>
             </div>
-            <p>Select one sauce:</p>
+            <h3>Select a sauce:</h3>
             <div class="radio">
               <label>
                 <input type="radio" name="pizza-sauce" value="red" checked>
@@ -58,10 +57,10 @@
               </label>
             </div>
             <div class="form-group">
-              <p>All pizzas come with mozzarella cheese. Select any additional toppings:</p>
+              <h3>Load on the toppings! (all pizzas come with mozzarella cheese)</h3>
               <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
               <input type="checkbox" name="topping" value="black olives">Black olives<br>
-              <input type="checkbox" name="topping" value="pineapple">pineapple<br>
+              <input type="checkbox" name="topping" value="pineapple">Pineapple<br>
               <input type="checkbox" name="topping" value="mushrooms">Sliced mushrooms<br>
               <input type="checkbox" name="topping" value="garlic">Roasted garlic<br>
               <input type="checkbox" name="topping" value="ham">Ham<br>
@@ -81,14 +80,14 @@
     <div class="col-md-5" id="order-review">
       <div class="card">
         <h3>Please review your order.</h3>
-        <p>Resubmit your pizza preferences, above, if you need to make any changes. When you're ready, click the button below to complete your order!</p>
+        <p>If you need to make any changes to your order, resubmit your size/sauce/toppings selections.</p>
         <p>Pizza size: <span class="pizza-size"></span></p>
         <p>Sauce: <span class="pizza-sauce"></span></p>
-        <p>Toppings:</p>
-        <ul id="selected-toppings">
+        <p class="selected-toppings">Toppings:</p>
+        <ul class="selected-toppings">
         </ul>
         <p id="total-price">Price: $<span class="pizza-price"></span></p>
-        <button id="purchase" class="btn" type="submit">This looks good. Complete my order!</button>
+        <button id="purchase" class="btn" type="submit">Yum! Complete my order</button>
       </div>
     </div>
 
