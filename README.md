@@ -6,21 +6,17 @@
 
 ## Description
 
-_This project is a webpage _
+_This webpage allows a user to choose one or more individual pizza toppings and a pizza size, then outputs a final cost of the pizza based on the user's selections._
 
 ## Specifications:
 
 | Specification | Example Input | Example Output |
 | ------------- |:-------------:| --------------:|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| Webpage determines user selection of size when the user submits a form | user clicks "order pizza" button | size = size obtained from select box |
+| Webpage determines user selection of one or more toppings when user submits a form | user clicks "order pizza" button | toppings = an array containing each "toppings" checkbox selected |
+| Webpage determines a base price of the pizza based on the user's size selection | size: small | price: 10 |
+| Webpage adds topping price to pizza price for each of the user's selected toppings | size: small, toppings: pepperoni | price: 12 |
+| Webpage outputs total price of pizza when user submits form | user clicks "order pizza" button | total price: $12 |
 
 ## Setup/Installation Requirements
 
