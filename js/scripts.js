@@ -33,6 +33,7 @@ Pizza.prototype.determinePrice = function() {
 // Front-end logic:
 
 var displayOrderDetails = function(pizza) {
+  $("ul#selected-toppings").empty();
   $("#order-review").show();
   $(".pizza-size").html(pizza.size);
   $(".pizza-sauce").html(pizza.sauce);
@@ -54,7 +55,6 @@ var completePurchase = function() {
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
-    $("ul#selected-toppings").empty();
 
     var inputSize = $("input:radio[name=pizza-size]:checked").val();
     var inputSauce = $("input:radio[name=pizza-sauce]:checked").val();
@@ -65,8 +65,8 @@ $(document).ready(function() {
       var inputTopping = $(this).val();
       userPizza.addTopping(inputTopping);
     });
+    console.log(userPizza.toppings);
 
-    console.log(userPizza);
     displayOrderDetails(userPizza);
 
     $("button#purchase").click(function() {
