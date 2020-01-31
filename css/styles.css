@@ -4,12 +4,22 @@ html, body {
   background-size: cover;
 }
 
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .jumbotron {
   margin-top: 2%;
   text-align: center;
   color: rgb(45, 119, 2);
   background-color: #FFF0DA;
   border: 2px solid rgb(45, 119, 2);
+}
+
+.jumbotron h1 {
+  font-weight: bold;
+  -webkit-text-stroke: 1.25px rgb(82, 1, 1);
+  color: rgb(247, 199, 199);
 }
 
 .jumbotron h2 {
@@ -31,11 +41,11 @@ html, body {
   text-align: center;
 }
 
-h3 {
+h4 {
   color: rgb(45, 119, 2);
 }
 
-.form-group h3 {
+.form-group h4 {
   margin-top: 10px;
 }
 
@@ -64,7 +74,6 @@ a {
 }
 
 a:hover {
-  cursor: pointer;
   color: rgb(45, 119, 2);
   text-decoration: underline;
   text-decoration-color: rgb(45, 119, 2);
@@ -75,4 +84,11 @@ img {
   height: auto;
   margin-left: 40%;
   margin-top: 3%;
+}
+
+.purchase-delivery {
+  font-style: italic;
+  margin-top: 5px;
+  text-align: center;
+  color: rgb(45, 119, 2);
 }
