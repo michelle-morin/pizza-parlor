@@ -33,13 +33,18 @@ Pizza.prototype.determinePrice = function() {
 // Front-end logic:
 
 var displayOrderDetails = function(pizza) {
-  $("ul#selected-toppings").empty();
+  $("ul.selected-toppings").empty();
   $("#order-review").show();
   $(".pizza-size").html(pizza.size);
   $(".pizza-sauce").html(pizza.sauce);
+  if (pizza.toppings.length >= 1) {
   pizza.toppings.forEach(function(topping) {
-    $("ul#selected-toppings").append("<li>" + topping + "</li>");
+    $("ul.selected-toppings").append("<li>" + topping + "</li>");
   });
+  } else {
+    $("ul.selected-toppings").hide();
+    $("p.selected-toppings").hide();
+  }
   var pizzaPrice = pizza.determinePrice();
   $(".pizza-price").html(pizzaPrice);
 }
