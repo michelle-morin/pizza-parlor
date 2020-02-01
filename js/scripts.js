@@ -21,13 +21,16 @@ Pizza.prototype.determinePrice = function() {
   for (var i=0; i < this.toppings.length; i++) {
     var tierOneToppings = ["black olives", "pineapple", "mushrooms", "garlic", "peppers", "artichoke hearts", "onion", "tomatoes", "cheese"];
     var tierTwoToppings = ["pepperoni", "ham", "bacon"];
+    var tierThreeToppings = ["oregano", "basil"];
     if (tierOneToppings.includes(this.toppings[i])) {
       price += 1;
     } else if (tierTwoToppings.includes(this.toppings[i])) {
       price += 2;
+    } else if (tierThreeToppings.includes(this.toppings[i])) {
+      price += 0.50;
     }
   }
-  return price;
+  return price.toFixed(2);
 }
 
 // Front-end logic:
