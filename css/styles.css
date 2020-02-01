@@ -38,6 +38,16 @@ body {
   border: 2px solid rgb(45, 119, 2);
 }
 
+#delivery-details .card, #no-delivery .card, #order-confirmation .card {
+  padding: 2% 10%;
+  margin: 2% 20%;
+}
+
+#delivery-details h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 #order-confirmation, #no-delivery {
   text-align: center;
 }
@@ -85,7 +95,7 @@ a:hover {
 img {
   width: 200px;
   height: auto;
-  margin-left: 40%;
+  margin-left: 25%;
   margin-top: 3%;
 }
 
