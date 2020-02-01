@@ -18,7 +18,7 @@ _This webpage allows a user to choose a pizza size, sauce, and optionally one or
 | Webpage determines price of the pizza based on size (small: 10; medium: 16; large: 22) and toppings selections (+1 or +2 each, depending on topping type) | user selects size "small" and topping "pepperoni" | price: 12 |
 | Webpage displays total price of pizza when user submits menu form | user clicks "review order" button | price: $12 |
 | Webpage displays order confirmation when user clicks pick-up order button | user clicks "pick-up order" button | "It's pizza time!" |
-| Webpage displays form for obtaining delivery details when user clicks order delivery button | user clicks "order delivery" button | Webpage displays form fields for name, street address, zipcode, and a button |
+| Webpage displays form for obtaining delivery details when user clicks order delivery button | user clicks "order delivery" button | Webpage displays form fields for name, street address, and zipcode, as well as a button to submit form responses |
 | Webpage displays order confirmation when user submits delivery details form and input zip code is within Portland city limits | name: "Michelle" address: 123 Main Street" zip code: 97205 | "It's pizza time!" |
 | Webpage displays message directing user to create an order for pick-up when user submits delivery details form and input zip code is outside of Portland city limits | name: "Michelle" address: "456 South Street" zip code: 999999 | "Delivery is only available within Portland. Click to place a pick-up order." |
 
@@ -33,7 +33,7 @@ _This webpage allows a user to choose a pizza size, sauce, and optionally one or
 
 ## Technologies Used
 
-_Git, HTML, CSS, JavaScript, jQuery_
+_Git, HTML, CSS (custom and Bootstrap v4.1.3), JavaScript, jQuery_
 
 ### License
 
