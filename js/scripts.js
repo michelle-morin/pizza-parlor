@@ -1,36 +1,44 @@
 // Back-end logic:
-function Pizza(size, sauce, toppings) {
-  this.size = size,
-  this.sauce = sauce,
-  this.toppings = toppings
+function Pizza() {
+  this.size = "size",
+  this.sauce = "sauce",
+  this.toppings = [],
+  this.price = 0
 }
 
 Pizza.prototype.addTopping = function(topping) {
   this.toppings.push(topping);
 }
 
+Pizza.prototype.addSize = function(size) {
+  this.size = size;
+}
+
+Pizza.prototype.addSauce = function(sauce) {
+  this.sauce = sauce;
+}
+
 Pizza.prototype.determinePrice = function() {
-  var price;
   if (this.size === "small") {
-    price = 10;
+    this.price += 10;
   } else if (this.size === "medium") {
-    price = 16;
+    this.price += 16;
   } else if (this.size === "large") {
-    price = 22;
+    this.price += 22;
   }
   for (var i=0; i < this.toppings.length; i++) {
     var tierOneToppings = ["black olives", "pineapple", "mushrooms", "garlic", "peppers", "artichoke hearts", "onion", "tomatoes", "cheese"];
     var tierTwoToppings = ["pepperoni", "ham", "bacon"];
     var tierThreeToppings = ["oregano", "basil"];
     if (tierOneToppings.includes(this.toppings[i])) {
-      price += 1;
+      this.price += 1;
     } else if (tierTwoToppings.includes(this.toppings[i])) {
-      price += 2;
+      this.price += 2;
     } else if (tierThreeToppings.includes(this.toppings[i])) {
-      price += 0.50;
+      this.price += 0.50;
     }
   }
-  return price.toFixed(2);
+  this.price = this.price.toFixed(2);
 }
 
 // Front-end logic:
@@ -50,8 +58,8 @@ var displayOrderDetails = function(pizza) {
     $("ul#selected-toppings").hide();
     $(".and").html("");
   }
-  var pizzaPrice = pizza.determinePrice();
-  $(".pizza-price").html(pizzaPrice);
+  pizza.determinePrice();
+  $(".pizza-price").html(pizza.price);
 }
 
 var completePurchasePickup = function() {
@@ -102,10 +110,11 @@ var completePurchaseDelivery = function(name, address, zipcode) {
 $(document).ready(function() {
   $("form#order").submit(function(event) {
     event.preventDefault();
+    var userPizza = new Pizza();
     var inputSize = $("input:radio[name=pizza-size]:checked").val();
+    userPizza.addSize(inputSize);
     var inputSauce = $("input:radio[name=pizza-sauce]:checked").val();
-    var inputToppings = [];
-    var userPizza = new Pizza(inputSize, inputSauce, inputToppings);
+    userPizza.addSauce(inputSauce);
     $("input:checkbox[name=topping]:checked").each(function() {
       var inputTopping = $(this).val();
       userPizza.addTopping(inputTopping);
